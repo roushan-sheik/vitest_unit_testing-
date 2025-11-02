@@ -30,3 +30,13 @@ it("it should provide correct sum if an numeric array is provided", () => {
   // Assertion
   expect(result).toBe(expectedResult);
 });
+
+it("it should throw an error if no argument is provided", () => {
+  const resultFn = () => add();
+  expect(resultFn).toThrow();
+});
+
+it("it should throw an error if multiple  arguments is provided", () => {
+  const resultFn = () => add(1, 2, 3);
+  expect(resultFn).toThrow();
+});
